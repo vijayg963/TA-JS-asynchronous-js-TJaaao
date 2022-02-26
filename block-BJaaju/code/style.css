@@ -157,3 +157,13 @@ input {
   padding: 2rem;
   margin: 2rem;
 }
+
+ul li {
+  display: inline;
+}
+
+img {
+  margin: 1rem;
+  max-width: 250px;
+  max-height: 250px;
+}
