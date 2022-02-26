@@ -5,7 +5,6 @@ let userName = document.querySelector('.username');
 let followers = document.querySelector('.follow');
 let following = document.querySelector('.following');
 let cat = document.querySelector('.cat');
-let imgCat = document.createElement('img');
 
 function displayUI(userData) {
   console.log(userData);
@@ -34,6 +33,20 @@ function handleChange(event) {
 
 form.addEventListener(`submit`, handleChange);
 
-// API: https://api.github.com/users/{username}
-// - Followers List: https://api.github.com/users/{username}/followers
-// - Following List: https://api.github.com/users/{username}/following
+const imgCat = document.querySelector('.cat img');
+const btn = document.querySelector('button');
+
+function handleClick() {
+  fetch(
+    `https://api.unsplash.com/photos/random/?client_id=218rfovrEzjCDabN2xCgnJdI29i4fUdUKmoY45Mo1TQ`    function (catInfo) {
+      imgCat.src = catInfo[0].url;
+    }
+  );
+}
+
+btn.addEventListener('click', handleClick);
+
+{
+  //218rfovrEzjCDabN2xCgnJdI29i4fUdUKmoY45Mo1TQ
+  // https://api.unsplash.com/photos/random/?client_id=218rfovrEzjCDabN2xCgnJdI29i4fUdUKmoY45Mo1TQ
+}
