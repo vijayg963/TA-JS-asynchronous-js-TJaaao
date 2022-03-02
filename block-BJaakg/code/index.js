@@ -27,9 +27,9 @@ function displayChar(char) {
   );
 }
 
-function displayData(datas = []) {
+function displayData(data = []) {
   ul.innerHTML = '';
-  datas.forEach((data) => {
+  data.forEach((data) => {
     let li = document.createElement('li');
     li.classList.add('mainChar');
     li.classList.add('flex');
