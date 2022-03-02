@@ -1,31 +1,31 @@
 // - Create four promises that resolve after 1, 2, 3 and 4 seconds with a random value. Using `Promise.all` log the value of each promise that it resolved with.
 
-// let promiseOne = new Promise((resolve) =>
-//   setTimeout(() => {
-//     resolve('First');
-//   }, 1000)
-// );
-// let promiseTwo = new Promise((resolve) =>
-//   setTimeout(() => {
-//     resolve('Second');
-//   }, 2000)
-// );
-// let promiseThree = new Promise((resolve) =>
-//   setTimeout(() => {
-//     resolve('Third');
-//   }, 3000)
-// );
-// let promiseFour = new Promise((resolve) =>
-//   setTimeout(() => {
-//     resolve('Four');
-//   }, 4000)
-// );
-// let promises = Promise.all([
-//   promiseOne,
-//   promiseTwo,
-//   promiseThree,
-//   promiseFour,
-// ]).then(console.log);
+let promiseOne = new Promise((resolve) =>
+  setTimeout(() => {
+    resolve('First');
+  }, 1000)
+);
+let promiseTwo = new Promise((resolve) =>
+  setTimeout(() => {
+    resolve('Second');
+  }, 2000)
+);
+let promiseThree = new Promise((resolve) =>
+  setTimeout(() => {
+    resolve('Third');
+  }, 3000)
+);
+let promiseFour = new Promise((resolve) =>
+  setTimeout(() => {
+    resolve('Four');
+  }, 4000)
+);
+let promises = Promise.all([
+  promiseOne,
+  promiseTwo,
+  promiseThree,
+  promiseFour,
+]).then(console.log);
 
 // - Create a list of 5 Github usernames in an array and using `Promise.all` get access to the data of each user from GitHub API. Log the number of followers of each user.
 let users = ['getify', 'gaearon', 'AArnott', 'subtleGradient', 'piranha'];
@@ -50,11 +50,11 @@ Promise.all(users.map((user) => fetch(`https://api.github.com/users/${user}`)))
 //   - https://random.dog/woof.json
 //   - https://aws.random.cat/meow
 
-// let one = fetch(`https://random.dog/woof.json`).then((res) => res.json());
+let one = fetch(`https://random.dog/woof.json`).then((res) => res.json());
 
-// let two = fetch(`https://aws.random.cat/meow`).then((res) => res.json());
+let two = fetch(`https://aws.random.cat/meow`).then((res) => res.json());
 
-// Promise.race([one, two]).then((value) => console.log(value));
+Promise.race([one, two]).then((value) => console.log(value));
 
 // - Use `Promise.allSettled` to log the value of each promise from the given list of promises. And also check if `Promise.all` works with `one`, `two` and `three` or not
 
